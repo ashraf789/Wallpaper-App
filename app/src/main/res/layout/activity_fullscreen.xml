@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="net.a6te.lazycoder.wallpapers.activity.FullscreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img1"
+        android:id="@+id/wallpaperIv"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/setWallpaperBtn"
+        android:onClick="setWallpaperBtn"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:text="Set"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimary"
+        android:background="@drawable/circular_btn"
+        />
+
+</RelativeLayout>
