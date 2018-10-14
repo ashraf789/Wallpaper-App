@@ -28,7 +28,7 @@
 </br>
 
 
-### This project still not fully developed. If you want to contribute you are wellcome.
+### NOTE: This project still not fully developed, so still now lots of things to develop. If you want to contribute you are wellcome.
 
 
 ## License
