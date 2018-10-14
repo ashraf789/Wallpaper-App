@@ -1,6 +1,7 @@
 package net.a6te.lazycoder.wallpapers.activity;
 
 import android.annotation.SuppressLint;
+import android.app.WallpaperManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,11 +10,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import net.a6te.lazycoder.wallpapers.R;
 import net.a6te.lazycoder.wallpapers.Utility;
+
+import java.io.IOException;
 
 
 public class FullscreenActivity extends AppCompatActivity {
@@ -50,6 +54,15 @@ public class FullscreenActivity extends AppCompatActivity {
     public void setWallpaperBtn(View view) {
         if (imageUrl != null){
             //set wall paper
+            WallpaperManager myWallpaperManager
+                    = WallpaperManager.getInstance(getApplicationContext());
+            try {
+                myWallpaperManager.setResource(Integer.valueOf(imageUrl));
+                Toast.makeText(getApplicationContext(),"wallpaper changed",Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }else {
 
         }
